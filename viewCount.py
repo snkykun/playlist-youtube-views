@@ -44,7 +44,7 @@ def kyyViewCount():
 
 
 
-schedule.every(1).hour.do(kyyViewCount)
+schedule.every(6).hours.do(kyyViewCount)
 
 while True:
 	schedule.run_pending()
