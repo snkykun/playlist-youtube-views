@@ -2,3 +2,4 @@
 
 discord_key = ''
 yt_api_key = ''
+webhook_url = ''
