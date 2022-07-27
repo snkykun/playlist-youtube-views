@@ -39,13 +39,13 @@ def kyyViewCount():
 
         if not kyy_nextPageToken:
             break
+
     with open('/var/www/html/wp-content/plugins/python-code/views.txt', 'w') as text_file:
 
         text_file.write(str(kyy_viewCounts))
-
     requests.post(botkeys.webhook_url, data={"content":"Updated the viewcount of Kyy's editing playlist | ***" + str(format(kyy_viewCounts, ",d")) + "*** views."})
 
-kyyViewCount()
+
 schedule.every(6).hours.do(kyyViewCount)
 
 while True:
