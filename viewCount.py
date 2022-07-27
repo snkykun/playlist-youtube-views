@@ -45,7 +45,7 @@ def kyyViewCount():
         text_file.write(str(kyy_viewCounts))
     requests.post(botkeys.webhook_url, data={"content":"Updated the viewcount of Kyy's editing playlist | ***" + str(format(kyy_viewCounts, ",d")) + "*** views."})
 
-
+kyyViewCount()
 schedule.every(6).hours.do(kyyViewCount)
 
 while True:
